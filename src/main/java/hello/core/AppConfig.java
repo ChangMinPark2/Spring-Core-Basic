@@ -15,12 +15,12 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
-    public MemberService memberService() {
+    public MemberService memberService()  {
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
-    public static MemoryMemberRepository memberRepository() {
+    public MemoryMemberRepository memberRepository() {
         return new MemoryMemberRepository();
     }
 
